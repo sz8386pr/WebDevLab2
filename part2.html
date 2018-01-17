@@ -5,58 +5,100 @@
   <meta name="viewport" content="width=device-width initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="style.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
 <body>
-  <h1>Some of my favorite things <span class="glyphicon glyphicon-heart"/>
-  </h1>
+  <div class="container">
 
-  <div class="favorite-section">
-    <h2 class="section-header">Favorite Movie <span class="glyphicon glyphicon-film"/></h2>
-    <p><span id="favorite-movie-title">The Room</span> is the best worst movie ever. <a href="http://www.imdb.com/title/tt0368226/?ref_=inth_ov_tt">Wiki page link</a>
-    </p>
-  </div>
 
-  <div class="favorite-section">
-    <h2 class="section-header">My Favorite Band/Artist <span class="glyphicon glyphicon-music"/></h2>
-    <p><span id="favorite-music-artist-name">Nickelback</span> is the best worst band ever. <a href="https://en.wikipedia.org/wiki/Nickelback">Wiki page link</a>
-    </p>
-  </div>
 
-  <div class="favorite-section">
-    <h2 class="section-header">My Favorite Food <span class="glyphicon glyphicon-cutlery"/></h2>
-    <ul>
-      <li id="most-favorite-food">Pizza</li>
-      <li>Steak</li>
-      <li>Chicken</li>
+    <h1>Some of my favorite things <span class="glyphicon glyphicon-heart"/>
+    </h1>
+
+    <ul class="nav nav-tabs">
+      <li role="presentation"><a href="#movies"  aria-controls="movies" role="tab" data-toggle="tab">Movies <span class="glyphicon glyphicon-film"/></a></li>
+      <li role="presentation"><a href="#artists"  aria-controls="artists" role="tab" data-toggle="tab">Artists <span class="glyphicon glyphicon-music"/></a></li>
+      <li role="presentation"><a href="#foods"  aria-controls="foods" role="tab" data-toggle="tab">Foods <span class="glyphicon glyphicon-cutlery"/></a></li>
+      <li role="presentation"><a href="#images"  aria-controls="images" role="tab" data-toggle="tab">Images <span class="glyphicon glyphicon-picture"/></a></li>
+      <li role="presentation"><a href="#books"  aria-controls="books" role="tab" data-toggle="tab">Books <span class="glyphicon glyphicon-book"/></a></li>
+      <li role="presentation"><a href="#program"  aria-controls="program" role="tab" data-toggle="tab">Program <span class="glyphicon glyphicon-floppy-disk"/></a></li>
     </ul>
-  </div>
 
-  <div class="favorite-section">
-    <h2 class="section-header">Some Favorite Images <span class="glyphicon glyphicon-camera"/></h2>
-    <img src="cat.jpg" alt="A cat under a blanket" title="Cat" width="500" class="favorite-image">
-        <img src="dog.jpg" alt="A dog covered with a scarf" title="Dog" width="500" class="favorite-image">
-  </div>
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="movies">
+        <div class="favorite-section">
+          <h2 class="section-header">Favorite Movie <span class="glyphicon glyphicon-film"/></h2>
+          <p><span id="favorite-movie-title">The Room</span> is the best worst movie ever. <a href="http://www.imdb.com/title/tt0368226/?ref_=inth_ov_tt">Wiki page link</a>
+          </p>
+        </div> <!-- End of favorite movie -->
+      </div>
 
-  <div class="favorite-section">
-    <h2>My Favorite Books <span class="glyphicon glyphicon-book"/></h2>
-    <table border="black">
-      <tr>
-        <th>Name</th>
-        <th>Author</th>
-        <th>Amazon Link</th>
-      </tr>
-      <tr>
-        <td>The Hobbit</td>
-        <td>J.R.R. Tolkien</td>
-        <td><a href="https://www.amazon.com/Hobbit-J-R-Tolkien/dp/054792822X">Buy on Amazon</a></td>
-      </tr>
-      <tr>
-        <td>Good and Cheap: Eat Well on $4/Day</td>
-        <td>Leanne Brown</td>
-        <td><a href="https://www.amazon.com/Good-Cheap-Eat-Well-Day-ebook/dp/B00N2A6HLG/ref=sr_1_6?s=books&ie=UTF8&qid=1515548748&sr=1-6&keywords=good+eats">Buy on Amazon</a></td>
-      </tr>
-    </table>
-  </div>
+      <div role="tabpanel" class="tab-pane" id="artists">
+        <div class="favorite-section">
+          <h2 class="section-header">My Favorite Band/Artist <span class="glyphicon glyphicon-music"/></h2>
+          <p><span id="favorite-music-artist-name">Nickelback</span> is the best worst band ever. <a href="https://en.wikipedia.org/wiki/Nickelback">Wiki page link</a>
+          </p>
+        </div> <!-- End of favorite artist -->
+      </div>
 
+      <div role="tabpanel" class="tab-pane" id="foods">
+        <div class="favorite-section">
+          <h2 class="section-header">My Favorite Food <span class="glyphicon glyphicon-cutlery"/></h2>
+          <ul>
+            <li id="most-favorite-food">Pizza</li>
+            <li>Steak</li>
+            <li>Chicken</li>
+          </ul>
+        </div> <!-- End of favorite food -->
+      </div>
+
+      <div role="tabpanel" class="tab-pane" id="images">
+        <div class="favorite-section">
+          <h2 class="section-header">Some Favorite Images <span class="glyphicon glyphicon-picture"/></h2>
+          <img src="cat.jpg" alt="A cat under a blanket" title="Cat" width="500" class="favorite-image">
+              <img src="dog.jpg" alt="A dog covered with a scarf" title="Dog" width="500" class="favorite-image">
+        </div> <!-- End of favorite images -->
+      </div>
+
+      <div role="tabpanel" class="tab-pane" id="books">
+        <div class="favorite-section">
+          <h2 class="section-header">My Favorite Books <span class="glyphicon glyphicon-book"/></h2>
+          <table border="black">
+            <tr>
+              <th>Name</th>
+              <th>Author</th>
+              <th>Amazon Link</th>
+            </tr>
+            <tr>
+              <td>The Hobbit</td>
+              <td>J.R.R. Tolkien</td>
+              <td><a href="https://www.amazon.com/Hobbit-J-R-Tolkien/dp/054792822X">Buy on Amazon</a></td>
+            </tr>
+            <tr>
+              <td>Good and Cheap: Eat Well on $4/Day</td>
+              <td>Leanne Brown</td>
+              <td><a href="https://www.amazon.com/Good-Cheap-Eat-Well-Day-ebook/dp/B00N2A6HLG/ref=sr_1_6?s=books&ie=UTF8&qid=1515548748&sr=1-6&keywords=good+eats">Buy on Amazon</a></td>
+            </tr>
+          </table>
+        </div> <!-- End of favorite books -->
+      </div>
+
+      <div role="tabpanel" class="tab-pane" id="program">
+        <div class="favorite-section">
+          <h2 class="section-header">My Favorite Program <span class="glyphicon glyphicon-floppy-disk"/></h2>
+          <p><a href="part1.html">Link</a> to the program page
+          </p>
+
+        </div> <!-- End of favorite program -->
+      </div>
+
+
+
+
+
+    </div> <!-- End of tab-content -->
+  </div> <!-- End of container -->
 </body>
