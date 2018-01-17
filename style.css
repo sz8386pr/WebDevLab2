@@ -1,0 +1,37 @@
+.favorite-section {
+  margin: 5px;
+  padding: 5px;
+  border: black 5px dotted;
+}
+
+body {
+  background-color: lightblue;
+}
+
+#favorite-movie-title {
+  font-style: italic;
+  color: darkorange;
+  background-color: blue;
+}
+
+#favorite-music-artist-name {
+  background-color: white;
+  color: deeppink;
+  font-weight: bold;
+}
+
+.section-header {
+  background: orange;
+  font: black;
+}
+
+#most-favorite-food {
+  font-weight : bold;
+  color: red;
+}
+
+.favorite-image {
+  border-radius: 10px;
+  border: black 3px solid;
+  opacity: 0.8;
+}

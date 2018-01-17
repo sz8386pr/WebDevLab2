@@ -1,0 +1,65 @@
+<!DOCTYPE html>   <!--Specifying HTML 5-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Favorite Program</title>
+
+  <meta name="viewport" content="width=device-width initial-scale=1">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="part1Stylesheet.css">
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="jumbotron">
+          <h1>Read From A File On Python</h1>
+        </div> <!-- End of jumbotron -->
+      </div> <!-- End of column -->
+    </div> <!-- End of row -->
+
+    <div class="row"> <!-- Beginning of second row -->
+      <div class="col-sm-4"> <!-- First column -->
+        <p>This is a simple example of reading a text file with Python
+          <br>
+          <a href="https://github.com/sz8386pr/SDC-Project-1/blob/master/wordGenerator.py">GitHub Link</a>
+        </p>
+      </div> <!-- End of first column -->
+      
+      <div class="col-sm-8"> <!-- Second column -->
+        <pre><code>
+          ''' Reads from the dictionary file (dictionary.txt by default)
+          and stores & returns the value into a list.
+          (Referenced try/except from ITEC1150 class lab 7 work ) '''
+
+          def readDictionary():
+            fileName = "dictionary.txt"
+            dictionaryFile = open(fileName, "r")
+            wordList = []
+
+            try:
+                words = dictionaryFile.readline().upper()
+                while words != "":
+                    wordList.append(words.rstrip("\n"))
+                    words = dictionaryFile.readline().upper()
+            # If an error found while reading from the file
+            except IOError:
+                print("Error found while reading the wordlist.txt file")
+            # If wrong value type has been found
+            except ValueError:
+                print("Invalid value found in the file")
+            # Close the file
+            else:
+                dictionaryFile.close()
+
+            return wordList
+        </code></pre>
+      </div> <!-- End of the second column -->
+    </div> <!-- End of the second row -->
+  </div> <!-- End of bootstrap container -->
+</body>
+</html>
