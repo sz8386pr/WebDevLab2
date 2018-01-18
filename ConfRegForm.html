@@ -1,0 +1,83 @@
+<!-- Create a web page for a conference registration form. It should have the following input fields and input validation:
+
+    Text User name, max length 70 characters. Required.
+    Password. Use a password input field. Required.
+    Email, validated as email. Required.
+    T-shirt size, either small, medium, or large. Use select and option elements. Required.
+    Date of birth, validated as a date. Required.
+    Radio buttons to select if wanting to receive email from conference sponsors; yes or no. Required.
+    Checkbox elements to select if attending the morning, and/or afternoon conference sessions.
+    Textarea: (for entering more than one line) any special requests. Not required.
+    A submit button - input type = submit.
+        (Note that clicking this button doesn't do anything, but once we have a web server, the submit button will be used to send form data to the server.)
+
+Each input element must have a name attribute. -->
+
+<!DOCTYPE html>   <!--Specifying HTML 5-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Conference Registration Page</title>
+  <meta name="viewport" content="width=device-width initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+
+<body>
+<div class=container>
+  <form>
+    <fieldset>
+      <legend>
+        Conference Registration
+      </legend>
+      <label>
+        Username:
+        <input type="text" name="username" maxlength="70"/>
+      </label><br/>
+
+      <label>
+        Password:
+        <input type="password" name="password"/>
+      </label><br/>
+
+      <label>
+        Email:
+        <input type="email" name="email"/>
+      </label><br/>
+
+      <label>
+        Birth Date:
+        <input type="date" name="birth_date"/>
+      </label><br/>
+
+      <label>
+        Attendance:
+        <input type="checkbox" name="morning"/>Morning conference
+        <input type="checkbox" name="afternoon"/>Afternoon conference
+      </label></br>
+
+      <label>
+        T-shirt Size:
+        <select name="tshirt_size">
+          <option value="small">Small</option>
+          <option value="medium">Medium</option>
+          <option value="large">Large</option>
+        </select>
+      </label><br/>
+
+      <Label>
+        Special Requests:<br/>
+        <textarea name="requests"></textarea>
+      </label><br/>
+
+      <label>
+        Would you like to receive email from our conference sponsors?<br/>
+        <input type="radio" name="sponsor_email" value="yes"/>Yes
+        <input type="radio" name="sponsor_email" value="no"/>No
+      </label><br/>
+
+      <input type="submit" value="submit"/>
+    </fieldset>
+  </form>
+</div>
+</body>
+</html>
