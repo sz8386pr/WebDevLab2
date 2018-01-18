@@ -1,0 +1,33 @@
+div {
+  border-bottom: 1px solid #efefef;
+  margin: 10px;
+  padding-bottom: 10px;
+  width: auto;
+}
+
+legend {
+  font-weight: bold;
+  font-size: 20px;
+
+}
+
+.title {
+  float: left;
+  width: 100px;
+  text-align: right;
+  padding-right: 10px;
+  font-weight: bold;
+}
+
+.regform {
+  font-family: fantasy;
+}
+
+.sponsor_email_title {
+  font-weight: bold;
+}
+
+.submit {
+  border-radius: 5px;
+  background-color: lightblue;
+}
